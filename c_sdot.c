@@ -1,7 +1,17 @@
 #include <stdio.h>
-#define MAX 5000
 
 extern float sdot(int n, float *a, float *b);
+
+float sdotChecker (int n, float *a, float *b) {
+	int i;
+	float res = 0;
+	
+	for (i = 0; i < n; i++) {
+		res += a[i] * b[i];
+	}
+	
+	return res;
+}
 
 int main() {
 	int n;
@@ -11,8 +21,8 @@ int main() {
 	scanf("%d", &n);
 	
 	//initialize float values
-	float a[MAX];
-	float b[MAX];
+	float a[n];
+	float b[n];
 	
 	//get values inside each vector
 	int i;
@@ -29,10 +39,14 @@ int main() {
 	}
 	
 	//perform sdot
-	float res = sdot(n, a, b);
+	float cres = sdotChecker(n, a, b);
+	float asmres = sdot(n, a, b);
 	
-	//print result
-	printf("Result: %f", res);
+	//print result using C checker
+	printf("\n\nC Result: %f\n", cres);
+	
+	//print asm result
+	printf("ASM Result: %f", asmres);
 	
 	return 0;
 }
