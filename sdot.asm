@@ -6,6 +6,10 @@ section .text
 global sdot
 
 sdot:
+    ;initialize xmm1
+    mov rax, 0
+    cvtsi2ss xmm1, rax
+    
     xor r9, r9 ;utilize as counter
     
     L1:
