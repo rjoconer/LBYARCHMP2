@@ -21,7 +21,9 @@
 | Testing for 2^24 inputs | 0.047700 seconds                 | 0.010700 seconds               | x86-64 by 0.037 seconds           |
 | Testing for 2^28 inputs | 0.651300 seconds                 | 0.157200 seconds               | x86-64 by 0.4941 seconds          |
 
-From the table above, we can conclude that x86-64 runs faster than the C program. Since x86-64 Assembly is a low-level language, it is likely to have a faster execution time due to its closeness to the CPU's machine code and direct access/control over hardware. 
+From the table above, we can conclude that x86-64 runs faster than the C program. Since x86-64 Assembly is a low-level language, it is likely to have a faster execution time due to its closeness to the CPU's machine code and direct access/control over hardware.
+
+Since x86-64 Assembly is a low-level language, it allows for a tighter loop with fewer instructions. By manually managing the xmm registers and avoiding the overhead of C compiler safeguards (like stack management inside the loop), the assembly kernel achieves significantly higher throughput.
 
 ---
 
