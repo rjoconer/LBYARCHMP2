@@ -13,7 +13,7 @@
 
 ### Execution Analysis
 
-> Click [here](https://drive.google.com/file/d/1X21pEA2bYtXxxb6HmAIf03dSfNG0qkf9/view?usp=sharing) to view sample run video.
+> Click [here](https://drive.google.com/file/d/1BdNxtzUnHkSzseLy7JVsnCIK6cloAVx-/view?usp=sharing) to view sample run video.
 
 |                         | C Kernel Average (after 20 runs) | x86-64 Average (after 20 runs) | Faster Run-Time + Time Difference |
 |-------------------------|----------------------------------|--------------------------------|-----------------------------------|
